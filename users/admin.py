@@ -8,13 +8,6 @@ class CustomUserAdmin(UserAdmin):
 
     """Custom User Admin"""
 
-    # list_display = ("username", "gender", "language", "currency", "superhost")
-    # list_filter = (
-    #     "language",
-    #     "currency",
-    #     "superhost",
-    # )
-
     fieldsets = UserAdmin.fieldsets + (
         (
             "Custom",
@@ -27,7 +20,17 @@ class CustomUserAdmin(UserAdmin):
                     "language",
                     "currency",
                     "superhost",
+                    "preference",
+                    "favourite_book_genre",
+                    "favourite_movie_genre",
                 )
             },
         ),
+    )
+
+    list_filter = (
+        "language",
+        "preference",
+        "favourite_book_genre",
+        "favourite_movie_genre",
     )
