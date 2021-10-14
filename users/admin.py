@@ -20,17 +20,7 @@ class CustomUserAdmin(UserAdmin):
                     "language",
                     "currency",
                     "superhost",
-                    "preference",
-                    "favourite_book_genre",
-                    "favourite_movie_genre",
                 )
             },
         ),
-    )
-
-    list_filter = (
-        "language",
-        "preference",
-        "favourite_book_genre",
-        "favourite_movie_genre",
     )
